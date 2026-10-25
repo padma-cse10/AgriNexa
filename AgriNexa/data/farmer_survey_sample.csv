@@ -1,0 +1,21 @@
+Farmer_ID,Age_Group,Location,Farming_Type,Crop,Area_Acres,Yield_Tons,Main_Challenge,Weather_Info,Modern_Tech_Awareness,Technology_Used,Government_Scheme_Awareness,PM_KISAN,PMFBY,Soil_Health_Card,ENAM,Drip_Irrigation,Organic_Farming,Interested_In_Training
+F001,31-45,Kakaraparru,Crop Farming,Paddy,3.5,7.2,Water Scarcity,Word of mouth,Yes,Mobile Apps,No,No,No,No,No,No,Yes,Yes
+F002,46-60,Kakaraparru,Crop Farming,Banana,4.0,6.1,High Input Cost,Radio/TV,No,None,No,No,No,No,No,No,No,Yes
+F003,31-45,Kakaraparru,Mixed Farming,Brinjal,2.5,3.8,Pests and Diseases,Mobile apps,Yes,Mobile Apps,No,No,No,No,No,Yes,Yes,Yes
+F004,46-60,Kakaraparru,Crop Farming,Paddy,5.0,10.5,Water Scarcity,Word of mouth,No,None,No,No,No,No,No,No,No,Yes
+F005,18-30,Kakaraparru,Mixed Farming,Wheat,2.0,4.5,Low Market Price,Mobile apps,Yes,Mobile Apps,No,No,No,No,No,No,Yes,Yes
+F006,31-45,Kakaraparru,Crop Farming,Paddy,4.5,9.3,High Input Cost,Government services,Yes,Drip Irrigation,No,No,No,No,No,Yes,Yes,Yes
+F007,46-60,Kakaraparru,Crop Farming,Chilli,3.0,4.8,Pests and Diseases,Word of mouth,No,None,No,No,No,No,No,No,No,Yes
+F008,31-45,Kakaraparru,Mixed Farming,Banana,3.0,4.2,Lack of Irrigation,Mobile apps,Yes,Mobile Apps,No,No,No,No,No,Yes,Yes,Yes
+F009,60+,Kakaraparru,Crop Farming,Paddy,2.5,5.0,Water Scarcity,Radio/TV,No,None,No,No,No,No,No,No,No,No
+F010,31-45,Kakaraparru,Crop Farming,Wheat,3.5,7.0,Low Market Price,Mobile apps,Yes,Mobile Apps,No,No,No,No,No,No,Yes,Yes
+F011,46-60,Kakaraparru,Crop Farming,Chamanthi,4.0,8.4,High Input Cost,Word of mouth,Yes,Organic Farming,No,No,No,No,No,Yes,Yes,Yes
+F012,31-45,Kakaraparru,Mixed Farming,Brinjal,2.0,3.1,Pests and Diseases,Mobile apps,Yes,Mobile Apps,No,No,No,No,No,Yes,Yes,Yes
+F013,18-30,Kakaraparru,Crop Farming,Chilli,2.5,4.0,Lack of Technical Knowledge,Social Media,Yes,Mobile Apps,Yes,Yes,No,No,Yes,No,Yes,Yes
+F014,46-60,Kakaraparru,Crop Farming,Paddy,3.0,6.5,Water Scarcity,Radio/TV,No,None,Yes,No,No,No,No,No,No,Yes
+F015,31-45,Kakaraparru,Mixed Farming,Brinjal,2.5,4.4,Lack of Irrigation,Mobile apps,Yes,Drip Irrigation,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+F016,46-60,Kakaraparru,Crop Farming,Chilli,4.0,6.2,Pests and Diseases,Government services,Yes,Mobile Apps,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes
+F017,31-45,Kakaraparru,Crop Farming,Wheat,3.5,6.8,Low Market Price,Mobile apps,Yes,Mobile Apps,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes
+F018,60+,Kakaraparru,Crop Farming,Banana,2.0,4.2,Water Scarcity,Word of mouth,No,None,Yes,Yes,No,No,No,No,No,Yes
+F019,31-45,Kakaraparru,Mixed Farming,Chamanthi,3.0,6.0,High Input Cost,Mobile apps,Yes,Drip Irrigation,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+F020,18-30,Kakaraparru,Mixed Farming,Chamanthi,2.5,5.0,Lack of Technical Knowledge,Social Media,Yes,Mobile Apps,Yes,Yes,No,Yes,No,Yes,Yes,Yes

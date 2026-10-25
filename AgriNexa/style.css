@@ -1,0 +1,158 @@
+    /* ─── CSS Variables ─── */
+        :root {
+            --sidebar-width: 250px;
+            --sidebar-collapsed: 70px;
+            --green-dark: #2e7d32;
+            --green-mid:  #4caf50;
+        }
+
+        /* Body */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            overflow-x: hidden;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: var(--sidebar-width);
+            min-height: 100vh;
+            background: linear-gradient(180deg, #1b5e20 0%, var(--green-dark) 100%);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1030;
+            transition: width 0.3s ease, left 0.3s ease;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar.collapsed { width: var(--sidebar-collapsed); }
+
+        /* header row */
+        .sidebar .sidebar-header { flex-shrink: 0; }
+        .sidebar .sidebar-header h3 {
+            white-space: nowrap;
+            overflow: hidden;
+            transition: opacity 0.25s;
+        }
+        .sidebar.collapsed .sidebar-header h3 { opacity: 0; width: 0; }
+        .sidebar.collapsed .sidebar-header .toggle-btn { margin: 0 auto; }
+
+        /* user profile */
+        .sidebar .user-profile { flex-shrink: 0; }
+        .sidebar .user-profile img { width: 5rem; transition: width 0.3s; }
+        .sidebar.collapsed .user-profile img { width: 2.8rem; }
+        .sidebar .user-profile .user-info { transition: opacity 0.25s; }
+        .sidebar.collapsed .user-profile .user-info { opacity: 0; height: 0; overflow: hidden; margin: 0 !important; }
+
+        /* nav links */
+        .sidebar .nav-link {
+            color: rgba(255,255,255,0.78) !important;
+            white-space: nowrap;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .sidebar .nav-link:hover {
+            background: rgba(255,255,255,0.13) !important;
+            color: #fff !important;
+        }
+        .sidebar .nav-link.active {
+            background: rgba(255,255,255,0.2) !important;
+            color: #fff !important;
+            font-weight: 600;
+        }
+        .sidebar .nav-link i { color: #fff; width: 1rem; text-align: center; }
+        .sidebar .nav-link .link-text { transition: opacity 0.25s; }
+        .sidebar.collapsed .nav-link .link-text { opacity: 0; width: 0; overflow: hidden; }
+        .sidebar.collapsed .nav-link { justify-content: center !important; }
+        .sidebar.collapsed .nav-link i { margin-right: 0 !important; }
+
+        /* sidebar backdrop (only for mobile) */
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 1029;
+        }
+        .sidebar-backdrop.show { display: block; }
+
+        /* MAIN CONTENT WRAPPER */
+        .main-content {
+            margin-left: var(--sidebar-width);
+            transition: margin-left 0.3s ease;
+            min-height: 100vh;
+        }
+        .main-content.expanded { margin-left: var(--sidebar-collapsed); }
+
+        /* ─── mobile menu button ─── */
+        .mobile-menu-btn { display: none; }
+
+        /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+           STAT CARDS
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+        .stat-card {
+            border-radius: 0.75rem !important;
+            border: none !important;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15) !important;
+        }
+
+        /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+           CHART CONTAINERS
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+        .chart-container {
+            position: relative;
+            height: 280px;
+            width: 100%;
+        }
+
+        /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+           CROPS TABLE
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+        .crop-row { border-left: 4px solid var(--green-mid); }
+
+        /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+           RESPONSIVE
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+        @media (max-width: 768px) {
+            .sidebar { left: -100%; width: var(--sidebar-width); }
+            .sidebar.open { left: 0; }
+            .main-content { margin-left: 0 !important; }
+            .mobile-menu-btn { display: inline-flex; }
+        }
+        @media (max-width: 480px) {
+            .stat-card .card-title { font-size: 1.4rem !important; }
+            .stat-card i.fa-3x { font-size: 1.5rem !important; }
+            .logout-btn-text { display: none; }
+        }.chart-container{position:relative;height:320px}.sidebar .nav-link{margin-bottom:4px}.sidebar .nav-link.active{background:rgba(255,255,255,.15);border-radius:8px}.card{border:0}.progress{height:10px}.table td,.table th{vertical-align:middle}
+
+/* Farmer Support */
+.support-card{border-radius:14px;transition:transform .2s ease,box-shadow .2s ease}.support-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.10)!important}.support-icon{width:48px;height:48px;border-radius:12px;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:14px}.support-hero{background:linear-gradient(135deg,#e8f5e9,#f8fff8);border-left:5px solid #2e7d32}
+@media print{.sidebar,.navbar,.btn{display:none!important}.main-content{margin-left:0!important}.page-content{display:none!important}#reportsPage{display:block!important}}
+
+/* Global language selector */
+.global-language{display:flex;align-items:center}
+.global-language select{border:1px solid #198754;border-radius:8px;padding:6px 30px 6px 10px;background:#fff;color:#145c38;font-weight:600;min-width:120px}
+@media(max-width:768px){.global-language{margin-left:auto!important}.global-language select{min-width:105px;font-size:12px}.navbar .badge{display:none}}
+/* Growing Together brand + Farmer Support steps */
+.brand-lockup{display:flex;align-items:center;gap:10px}.brand-logo{width:38px;height:38px;object-fit:contain}.brand-tagline{font-size:9px;opacity:.85;color:#dff5e7;display:block;margin-top:2px}.heading-logo{width:34px;height:34px;vertical-align:middle;margin-right:7px}.support-steps-card{border-left:4px solid #198754}.support-step{display:flex;gap:14px;height:100%;padding:16px;border:1px solid #e5eee8;border-radius:12px;background:#fbfefc}.step-number{flex:0 0 38px;width:38px;height:38px;border-radius:50%;background:#198754;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px}.support-step h6{margin:2px 0 6px;font-weight:700}.support-step p{margin:0;color:#68756e;font-size:14px;line-height:1.5}
+
+/* Dashboard usage flow and logo fallbacks */
+.brand-logo-fallback{display:none;width:52px;height:52px;border-radius:50%;background:#1b7f4d;color:#fff;place-items:center;font-size:28px;flex:none}
+.heading-logo-fallback{display:none;width:42px;height:42px;border-radius:50%;background:#1b7f4d;color:#fff;place-items:center;font-size:24px;vertical-align:middle}
+.usage-flow{display:flex;align-items:stretch;gap:10px;overflow-x:auto;padding:6px 2px 12px}
+.usage-step{min-width:190px;flex:1;display:flex;gap:12px;padding:14px;border:1px solid #e5e7eb;border-radius:14px;background:#f8faf8}
+.usage-step h6{margin:0 0 6px;font-weight:700;color:#176b3b}
+.usage-step p{margin:0;color:#5f6b64;font-size:.9rem;line-height:1.45}
+.usage-number{width:34px;height:34px;border-radius:50%;background:#198754;color:#fff;display:grid;place-items:center;font-weight:700;flex:none}
+.usage-arrow{display:grid;place-items:center;color:#198754;font-size:24px;font-weight:700;flex:none}
+.chatbot-tip{margin-top:14px;padding:12px 14px;border-left:4px solid #198754;background:#eef8f1;border-radius:8px;color:#36533f}
+@media(max-width:900px){.usage-flow{display:grid;grid-template-columns:1fr}.usage-arrow{display:none}.usage-step{min-width:0}}
+
+.support-guide-list{margin:0;padding-left:1.5rem}.support-guide-list li{margin-bottom:.75rem;line-height:1.5}.support-guide-list li:last-child{margin-bottom:0}
